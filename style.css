@@ -53,7 +53,8 @@
 }
 
 .avatar-box img {
-    width: 10vw
+    width: 10vw;
+    height: 10vw;
 }
 
 .info-content-title {
