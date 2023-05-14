@@ -19,10 +19,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page">
+<body class="page page_theme_light">
+    <button class="button-change-theme button-change-theme_light" type="button"></button>
     <section class="service">
         <div class="service-list">
-            <div class="service-list__item">
+            <div class="service-list__item service-list__item_theme_light">
                 <div class="optional-info">
                     <figure class="avatar-box">
                         <picture>
@@ -32,16 +33,16 @@
                     </figure>
 
                     <div class="optional-info__text">
-                        <h1 class="optional-info__title" title="Kristina Demidova">Демидова Кристина</h1>
+                        <h1 class="optional-info__title optional-info__title_theme_light" title="Kristina Demidova">Демидова Кристина</h1>
                     </div>
                 </div>
             </div>
 
-            <div class="service-list__item">
+            <div class="service-list__item service-list__item_theme_light">
                 <div class="service-content">
-                    <h3 class="service-content__title">Немного обо мне</h3>
+                    <h3 class="service-content__title service-content__title_theme_light">Немного обо мне</h3>
 
-                    <p class="service-content__text">
+                    <p class="service-content__text service-content__text_theme_light">
                         Меня зовут Демидова Кристина. Начала заниматься фотографией в 14 лет в
                         фотостудии "Улыбка"имени В.Гришакова.
                         Первая серия фотографий "Солнечные мгновения" была отмечена на многих фотоконкурсах. 
@@ -58,16 +59,16 @@
         </div>
     </section>
     <div class="series">
-        <h2 class="section__title centered_text_block">Мои работы</h2>
+        <h2 class="section__title section__title_theme_light centered_text_block">Мои работы</h2>
         <section class="service">
 
             <div class="service-list">
 
-                <div class="service-list__item">
+                <div class="service-list__item service-list__item_theme_light">
                     <div class="service-content">
-                        <h4 class="service-content__title">Солнечные мгновения</h4>
+                        <h4 class="service-content__title service-content__title_theme_light">Солнечные мгновения</h4>
 
-                        <p class="service-content__text">
+                        <p class="service-content__text service-content__text_theme_light">
                             Часто, находясь дома я замечаю маленькие напоминания, 
                             оставленные солнцем - яркий желтый свет на двери
                             комнаты или интересно подсвеченные следы на тарелке салата. 
@@ -96,10 +97,10 @@
                     </div>
                 </div>
 
-                <div class="service-list__item">
+                <div class="service-list__item service-list__item_theme_light">
                     <div class="service-content">
-                        <h4 class="service-content__title">Современная столица</h4>
-                        <p class="service-content__text">
+                        <h4 class="service-content__title service-content__title_theme_light">Современная столица</h4>
+                        <p class="service-content__text service-content__text_theme_light">
                             Люблю гулять в Москве. Для меня это город инноваций и технологий. Мир сейчас
                             быстро меняется и это
                             отражается во всем, в том числе и в облике новых построек. Кто-то любит современную
@@ -132,11 +133,11 @@
 
                 </div>
 
-                <div class="service-list__item">
+                <div class="service-list__item service-list__item_theme_light">
                     <div class="service-content">
-                        <h4 class="service-content__title">В четырех стенах</h4>
+                        <h4 class="service-content__title service-content__title_theme_light">В четырех стенах</h4>
 
-                        <p class="service-content__text">
+                        <p class="service-content__text service-content__text_theme_light">
                             Во время первой волны короновируса я оказалась заперта в своей комнате. 
                             Конечно, жизнь не остановилась
                             и мне, как и всем выпускникам нужно было продолжать готовиться к экзаменам. 
@@ -214,9 +215,37 @@
                         6.22-.449-.183-3.562-1.458-4.618-1.888l.014-.006 11.473-4.938 5.62-2.414c1.48-.634 2.51-1.071 2.626-1.119z"/></svg>
                 </a>
             </div>
+        </div>
+        <button class="button-contact button-contact_theme_light" type="button">Связаться со мной</button>
+    </div>
 
+    <div class="popup popup_message popup_opene">
+        <div class="popup__container" id="message-container">
+            <h3 class="popup__title">Вы ещё здесь?</h3>
+            <button class="popup__send-button" id="close-message-button">Закрыть</button>
         </div>
     </div>
+
+    
+    <div class="contact-form popup">
+        <canvas class="canvas" id="canvas"></canvas>
+            <div class="popup__container" id="form-container">
+                <h3 class="popup__title">Форма обратной связи</h3>
+                <form class="popup__form" name="contact" novalidate>
+                    <input class="popup__input popup__input_type_name" id="name" type="text" name="name" placeholder="Имя">
+                    <span class="popup__error_name popup__error"></span>
+                    <input class="popup__input popup__input_type_contact" id="email" type="email" name="email" placeholder="Email" required data-form-input>
+                    <span class="popup__error_email popup__error"></span>
+                    <input class="popup__input popup__input_type_contact" id="phone" type="phone" name="phone" placeholder="Телефон" required data-form-input>
+                    <span class="popup__error_phone popup__error"></span>
+                    <textarea class="popup__input popup__input_type_text" id="text" name="text" rows="5" placeholder="Текст сообщения"></textarea>
+                    <span class="popup__error_text popup__error"></span>
+                    <button type="submit" class="popup__send-button" id="submit-button">Отправить</button>
+                </form>
+            </div> 
+        </canvas>   
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
