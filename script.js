@@ -83,7 +83,6 @@ function raindropEffect() {
       });
     }
   
-  
     function drawRain() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < raindrops.length; i++) {
@@ -120,7 +119,7 @@ function raindropEffect() {
 
 function validateName() {
   const regex = /^[A-Za-zА-Яа-я]+$/;
-  if (nameInput.value.trim() === "") {
+  if (nameInput.value === "") {
     nameError.textContent = "Это поле обязательно для заполнения";
     nameInput.classList.add("input_error");
     return false;
@@ -239,6 +238,12 @@ buttonContact.addEventListener("click", function() {
     raindropEffect();
   }
 });
+
+window.addEventListener("resize", function () {
+  if (contactForm.classList.contains("popup_opened") && window.innerWidth > 800) {
+    raindropEffect();
+  }
+})
 
 nameInput.addEventListener("input", validateName);
 emailInput.addEventListener("input", validateEmail);

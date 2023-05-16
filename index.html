@@ -78,23 +78,22 @@
                             что нужно ценить каждый день своей жизни и что в будущем меня
                             ждут счастливые моменты.
                         </p>
-                        <div class="series_sunny-moments">
-                            <img class="series_sunny-moments__1 series_two_column series_photo"
-                                src="./templates/sunny-moments/1.jpg" 
-                                alt="Первая фотография серии Солнечные мгновения">
-                            <img class="series_sunny-moments__2 series_photo" 
-                            src="./templates/sunny-moments/2.jpg"
-                                alt="Вторая фотография серии Солнечные мгновения">
-                            <img class="series_sunny-moments__3 series_photo" 
-                            src="./templates/sunny-moments/3.jpg"
-                                alt="Третья фотография серии Солнечные мгновения">
-                            <img class="series_sunny-moments__4 series_photo" 
-                            src="./templates/sunny-moments/4.jpg"
-                                alt="Четвертая фотография серии Солнечные мгновения">
-                            <img class="series_sunny-moments__5 series_photo" 
-                            src="./templates/sunny-moments/5.jpg"
-                                alt="Пятая фотография серии Солнечные мгновения">
-                        </div>
+
+                        <article class="photos" data-page="photos">
+                            <div class="container">
+                              <div class="image-container">
+                                <button class="image-item" data-modal="true" data-gallery="Sunny moments" aria-label="Open Sunny moments image gallery">
+                                  <img src="./templates/sunny-moments-2/1.jpg" alt="Sunny moments">
+                                </button>
+                              </div>
+                            </div>
+                            <script type="module">
+                              import initGallery from "./galleryApp.js";
+                              initGallery('./data/galleries.json', {
+                                speed: 600,
+                              })
+                            </script>
+                        </article>
                     </div>
                 </div>
 
@@ -220,7 +219,7 @@
         <button class="button-contact button-contact_theme_light" type="button">Связаться со мной</button>
     </div>
 
-    <div class="popup popup_message popup_opene">
+    <div class="popup popup_message">
         <div class="popup__container" id="message-container">
             <h3 class="popup__title">Вы ещё здесь?</h3>
             <button class="popup__send-button" id="close-message-button">Закрыть</button>

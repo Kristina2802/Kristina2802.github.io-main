@@ -1,0 +1,27 @@
+[
+    {
+      "name" : "Sunny moments",
+      "images" : [
+        {
+            "src": "./templates/sunny-moments-2/1.jpg",
+            "alt": "Первая фотография серии Солнечные мгновения"
+          },
+          {
+            "src": "./templates/sunny-moments-2/2.jpg",
+            "alt": "Вторая фотография серии Солнечные мгновения"
+          },
+          {
+            "src": "./templates/sunny-moments-2/3.jpg",
+            "alt": "Третья фотография серии Солнечные мгновения"
+          },
+          {
+            "src": "./templates/sunny-moments-2/4.jpg",
+            "alt": "Четвертая фотография серии Солнечные мгновения"
+          },
+          {
+            "src": "./templates/sunny-moments-2/5.jpg",
+            "alt": "Пятая фотография серии Солнечные мгновения"
+          }
+      ]
+    }
+  ]
