@@ -63,7 +63,7 @@ function raindropEffect() {
     let minSize = 1;
     let maxSize = 6;
     let minSpeed = 2;
-    let maxSpeed = 50;
+    let maxSpeed = 10;
   
     for (
       let i = 0;
@@ -110,6 +110,8 @@ function raindropEffect() {
     
     setInterval(function () {
       if (window.innerWidth < 800) {
+        raindrops.length = 0;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         return;
       }
       drawRain();
