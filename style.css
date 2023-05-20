@@ -3,12 +3,14 @@
 }
 
 .page_theme_light {
-    background-color: rgb(148, 132, 96);
+    background: rgb(18,17,34);
+background: linear-gradient(90deg, rgba(18,17,34,1) 0%, rgba(154,115,48,0.9024859943977591) 50%, rgba(212,197,164,1) 100%);
     color: black;
 }
 
 .page_theme_dark {
-    background-color: rgb(96, 95, 95);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(173,156,113,0.8552631578947368) 49%, rgba(230,203,101,0.7868421052631579) 100%);
     color: white;
 }
 
@@ -21,13 +23,16 @@
     max-width: 900px
 }
 
+/* .popup_for_gallery::after {
+    z-index: 10;
+} */
 *, *::after, *::before {
-    z-index: 3;
     border: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+
   :root {
   --hue: 206;
   --bkg: var(--hue) 50% 96%;
@@ -602,3 +607,7 @@
         max-height: 90%;
     }
 } 
+
+.my-body-noscroll-class {
+    overflow: hidden;
+}

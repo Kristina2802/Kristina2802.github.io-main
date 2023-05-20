@@ -7,6 +7,7 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const container = document.querySelector('.popup-div-image');
 const totalImages = galleryImages.length;
+const body = document.querySelector('.page');
 
 let start;
 let currentImageIndex = 0;
@@ -58,15 +59,18 @@ nextBtn.addEventListener('click', () => {
 
 function displayPopup() {
     popup.classList.add('show-popup');
+    body.classList.add('my-body-noscroll-class');
     container.style.display = 'block';
     updatePopupImage();
 }
 function hidePopup() {
+    body.classList.remove('my-body-noscroll-class');
     popup.classList.remove('show-popup');
 }
 popup.addEventListener('click', e => {
     if (!(e.composedPath().includes(popupContainer) || e.composedPath().includes(closeBtn)) && !(e.composedPath().includes(prevBtn) || e.composedPath().includes(nextBtn))) {
-      popup.classList.remove("show-popup")
+       body.classList.remove('my-body-noscroll-class');
+       popup.classList.remove("show-popup");
     }
 })
 function updatePopupImage() {
