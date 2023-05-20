@@ -385,8 +385,7 @@ background: linear-gradient(90deg, rgba(18,17,34,1) 0%, rgba(154,115,48,0.902485
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
-    overflow: hidden;
+    z-index: 5;
     background-color: rgba(0, 0, 0, .5);
 }
 
