@@ -1,7 +1,7 @@
 const buttonContact = document.querySelector(".button-contact");
-const contactForm = document.querySelector(".contact-form")
-const popupContainer = document.getElementById("form-container")
-const page = document.querySelector(".page")
+const contactForm = document.querySelector(".contact-form");
+const popupContainer = document.getElementById("form-container");
+const page = document.querySelector(".page");
 const popupInputs = document.querySelectorAll(".popup__input");
 const popupButton = document.getElementById("submit-button");
 const popupForm = document.querySelector(".popup__form");
@@ -267,11 +267,13 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!localStorage.getItem("show")) {
       popup.classList.add("popup_opened");
       localStorage.setItem("show", "true");
+      page.classList.add('my-body-noscroll-class');
     }
   }
 
   function close() {
     popup.classList.remove("popup_opened");
+    page.classList.remove('my-body-noscroll-class');
   }
 
   setTimeout(function() {
