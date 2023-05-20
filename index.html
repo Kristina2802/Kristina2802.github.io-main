@@ -7,7 +7,6 @@
     <meta name="description" content="Портфолио фотографий Кристины Демидовой">
     <meta name="author" content="Kristina Demidova">
 	<meta name="content-language" content="ru">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
     <meta itemprop="name" content="Kristina Demidova">
     <meta itemprop="description" content="Portfolio photographs">
@@ -78,23 +77,23 @@
                             что нужно ценить каждый день своей жизни и что в будущем меня
                             ждут счастливые моменты.
                         </p>
-
-                        <article class="photos" data-page="photos">
-                            <div class="container">
-                              <div class="image-container">
-                                <button class="image-item" data-modal="true" data-gallery="Sunny moments" aria-label="Open Sunny moments image gallery">
-                                  <img src="./templates/sunny-moments-2/1.jpg" alt="Sunny moments">
-                                </button>
-                              </div>
+                        <div class="gallery">
+                            <div class="series_sunny-moments">
+                                <a class="gallery__link series_two_column" href="./templates/sunny-moments-2/1.jpg"><img src="./templates/sunny-moments-2/1.jpg" alt="Первая фотография серии Солнечные мгновения" class="series_photo"></a>
+                                <a class="gallery__link" href="./templates/sunny-moments-2/2.jpg"><img src="./templates/sunny-moments-2/2.jpg" alt="Вторая фотография серии Солнечные мгновения" class="series_photo"></a>
+                                <a class="gallery__link" href="./templates/sunny-moments-2/3.jpg"><img src="./templates/sunny-moments-2/3.jpg" alt="Третья фотография серии Солнечные мгновения" class="series_photo"></a>
+                                <a class="gallery__link" href="./templates/sunny-moments-2/4.jpg"><img src="./templates/sunny-moments-2/4.jpg" alt="Четвертая фотография серии Солнечные мгновения" class="series_photo"></a>
+                                <a class="gallery__link" href="./templates/sunny-moments-2/5.jpg"><img src="./templates/sunny-moments-2/5.jpg" alt="Пятая фотография серии Солнечные мгновения" class="series_photo"></a>
                             </div>
-                            <script type="module">
-                              import initGallery from "./galleryApp.js";
-                              initGallery('./data/galleries.json', {
-                                speed: 600,
-                              })
-                            </script>
-                        </article>
-                    </div>
+                        </div>
+                        <div id="popup_for_gallery" class="popup_for_gallery">
+                            <span class="close">&times;</span>
+                            <div class="popup-div-image"></div>
+                            <a class="prev">&#10094;</a>
+                            <a class="next">&#10095;</a>
+                            <script src="popupgallery.js"></script>
+                        </div>
+                    </div>    
                 </div>
 
                 <div class="service-list__item service-list__item_theme_light">
@@ -228,7 +227,7 @@
 
     
     <div class="contact-form popup">
-        <canvas class="canvas" id="canvas"></canvas>
+        <canvas class="canvas" id="canvas">
             <div class="popup__container" id="form-container">
                 <h3 class="popup__title">Форма обратной связи</h3>
                 <form class="popup__form" name="contact" novalidate>
@@ -236,7 +235,7 @@
                     <span class="popup__error_name popup__error"></span>
                     <input class="popup__input popup__input_type_contact" id="email" type="email" name="email" placeholder="Email" required data-form-input>
                     <span class="popup__error_email popup__error"></span>
-                    <input class="popup__input popup__input_type_contact" id="phone" type="phone" name="phone" placeholder="Телефон" required data-form-input>
+                    <input class="popup__input popup__input_type_contact" id="phone" type="tel" name="phone" placeholder="Телефон" required data-form-input>
                     <span class="popup__error_phone popup__error"></span>
                     <textarea class="popup__input popup__input_type_text" id="text" name="text" rows="5" placeholder="Текст сообщения"></textarea>
                     <span class="popup__error_text popup__error"></span>
