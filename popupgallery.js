@@ -16,7 +16,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Add click event listener to each gallery image
 links.forEach((link) => {
     link.addEventListener('click', function (evt) {
         evt.preventDefault();
@@ -64,13 +63,13 @@ function displayPopup() {
     updatePopupImage();
 }
 function hidePopup() {
-    body.classList.remove('my-body-noscroll-class');
     popup.classList.remove('show-popup');
+    body.classList.remove('my-body-noscroll-class');;
 }
 popup.addEventListener('click', e => {
     if (!(e.composedPath().includes(popupContainer) || e.composedPath().includes(closeBtn)) && !(e.composedPath().includes(prevBtn) || e.composedPath().includes(nextBtn))) {
-       body.classList.remove('my-body-noscroll-class');
-       popup.classList.remove("show-popup");
+      popup.classList.remove("show-popup");
+      body.classList.remove('my-body-noscroll-class');
     }
 })
 function updatePopupImage() {

@@ -1,7 +1,7 @@
 const buttonContact = document.querySelector(".button-contact");
-const contactForm = document.querySelector(".contact-form");
-const popupContainer = document.getElementById("form-container");
-const page = document.querySelector(".page");
+const contactForm = document.querySelector(".contact-form")
+const popupContainer = document.getElementById("form-container")
+const page = document.querySelector(".page")
 const popupInputs = document.querySelectorAll(".popup__input");
 const popupButton = document.getElementById("submit-button");
 const popupForm = document.querySelector(".popup__form");
@@ -136,7 +136,7 @@ function validateName() {
 }
 
 function validateEmail() {
-  const regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]{2}(?:[a-z0-9-]*[a-z0-9])?/;
+  const regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]{2}(?:[a-z0-9-]*[a-z0-9]{2})?/;
   if (email.value === "") {
     emailError.textContent = "Это поле обязательно для заполнения";
     email.classList.add("input_error");
@@ -267,13 +267,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!localStorage.getItem("show")) {
       popup.classList.add("popup_opened");
       localStorage.setItem("show", "true");
-      page.classList.add('my-body-noscroll-class');
     }
   }
 
   function close() {
     popup.classList.remove("popup_opened");
-    page.classList.remove('my-body-noscroll-class');
   }
 
   setTimeout(function() {

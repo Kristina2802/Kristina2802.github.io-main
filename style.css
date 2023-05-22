@@ -19,17 +19,14 @@ background: linear-gradient(90deg, rgba(18,17,34,1) 0%, rgba(154,115,48,0.902485
     padding: 20px;
     border-radius: 14px;
     box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-    z-index: 4;
     max-width: 900px
 }
 
-/* .popup_for_gallery::after {
-    z-index: 10;
-} */
 *, *::after, *::before {
     border: 0;
     padding: 0;
     box-sizing: border-box;
+    z-index: 3;
   }
   
 
@@ -487,7 +484,7 @@ background: linear-gradient(90deg, rgba(18,17,34,1) 0%, rgba(154,115,48,0.902485
 }
 
 .button-change-theme_light {
-    background-image: url("./templates/light_theme.png");
+    background-image: url("./templates/dark.png");
 }
 
 .button-change-theme_dark {
