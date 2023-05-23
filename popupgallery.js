@@ -1,4 +1,10 @@
 const galleryImages = document.querySelectorAll('.series_photo');
+const sunnyMoments = document.querySelectorAll('.sunny-moments');
+const modernCapital = document.querySelectorAll('.modern-capital');
+const sunnyMomentsl = sunnyMoments.length;
+const modernCapitall = modernCapital.length;
+const inFourWalls = document.querySelectorAll('.in-four-walls');
+const inFourWallsl = inFourWalls.length;
 const links = document.querySelectorAll('.gallery__link');
 const popup = document.getElementById('popup_for_gallery');
 const popupImage = document.getElementById('popup__image');
@@ -23,7 +29,6 @@ links.forEach((link) => {
 })
 galleryImages.forEach((image, index) => {
     image.addEventListener('click', () => {
-        // Set the current image index and display the popup
         currentImageIndex = index;
         start = true;
         container.classList.add('popup-content-start');
@@ -57,37 +62,37 @@ nextBtn.addEventListener('click', () => {
 });
 
 function displayPopup() {
-    popup.classList.add('show-popup');
     body.classList.add('my-body-noscroll-class');
     container.style.display = 'block';
     updatePopupImage();
+    popup.classList.add('show-popup');
 }
+
 function hidePopup() {
     popup.classList.remove('show-popup');
     body.classList.remove('my-body-noscroll-class');;
 }
+
 popup.addEventListener('click', e => {
     if (!(e.composedPath().includes(popupContainer) || e.composedPath().includes(closeBtn)) && !(e.composedPath().includes(prevBtn) || e.composedPath().includes(nextBtn))) {
       popup.classList.remove("show-popup");
       body.classList.remove('my-body-noscroll-class');
     }
 })
+
 function updatePopupImage() {
     if (!start) {
         container.classList.remove('popup-content-show');
-    }    // Get the image source from the corresponding gallery image
+    }
     setTimeout(() => {
         const imageSrc = galleryImages[currentImageIndex].getAttribute('src');
-        // Add the image source to the popup image
         container.innerHTML = `<img class="popup-content-image" id ="popup__image" src="${imageSrc}">`;
-        // Hide the previous button if the current image is the first image
-        if (currentImageIndex === 0) {
+        if (currentImageIndex === 0 || currentImageIndex === sunnyMomentsl || currentImageIndex === sunnyMomentsl + modernCapitall) {
             prevBtn.style.display = 'none';
         } else {
             prevBtn.style.display = 'block';
         }
-        // Hide the next button if the current image is the last image
-        if (currentImageIndex === totalImages - 1) {
+        if (currentImageIndex === sunnyMomentsl - 1 || currentImageIndex === sunnyMomentsl + modernCapitall - 1 || currentImageIndex === totalImages - 1) {
             nextBtn.style.display = 'none';
         } else {
             nextBtn.style.display = 'block';
@@ -95,6 +100,6 @@ function updatePopupImage() {
         if (!start) {
             container.classList.add('popup-content-show');
         }
-    }, 400);
+    }, 0);
 
 }
